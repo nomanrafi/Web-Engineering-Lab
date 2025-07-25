@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Biodata</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <h1>Marriage Biodata</h1>
+            <nav>
+                <ul>
+                    <li><a href="#basicInfo" class="active">Basic Info</a></li>
+                    <li><a href="#familyDetails">Family Details</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#profession">Profession</a></li>
+                    <li><a href="#lifestyle">Appearance & Lifestyle</a></li>
+                    <li><a href="#partnerPreferences">Partner Preferences</a></li>
+                    <li><a href="#additionalDetails">Additional Details</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="form-container">
+            <form id="biodataForm" onsubmit="return validateForm(event)">
+                <div class="form-section" id="basicInfo">
+                    <h2>Basic Information</h2>
+                    <label for="photo" class="file-upload">Upload Photo:
+                        <span class="file-custom">Choose File</span>
+                        <input type="file" id="photo" accept="image/*">
+                    </label>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" oninput="validateTextOnly(this)">
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" oninput="validateMixed(this)">
+
+                    <label for="placeOfBirth">Place of Birth:</label>
+                    <input type="text" id="placeOfBirth" oninput="validateTextOnly(this)">
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" oninput="validateNumberOnly(this)">
+
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                        <label><input type="radio" name="gender" value="Other"> Other</label>
+                    </div>
+
+                    <label for="height">Height:</label>
+                    <input type="text" id="height" oninput="validateHeight(this)">
+
+                    <label for="maritalStatus">Marital Status:</label>
+                    <select id="maritalStatus" onchange="validateSelect(this)">
+                        <option value="Select">Select</option>
+                        <option value="Married">Married</option>
+                        <option value="Never Married">Never Married</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Widowed">Widowed</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="religion">Religion:</label>
+                    <input type="text" id="religion" oninput="validateTextOnly(this)">
+
+                    <label for="nationality">Nationality:</label>
+                    <input type="text" id="nationality" oninput="validateTextOnly(this)">
+
+                    <label for="bloodGroup">Blood Group:</label>
+                    <select id="bloodGroup" onchange="validateSelect(this)">
+                        <option value="Select">Select</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" oninput="validateNumberOnly(this)">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" oninput="validateMixed(this)">
+
+                    <label for="permanentAddress">Permanent Address:</label>
+                    <textarea id="permanentAddress" oninput="validateMixed(this)"></textarea>
+
+                    <label for="presentAddress">Present Address:</label>
+                    <textarea id="presentAddress" oninput="validateMixed(this)"></textarea>
+                </div>
+
+                <div class="form-section" id="familyDetails">
+                    <h2>Family Details</h2>
+                    <label for="fatherName">Father's Name:</label>
+                    <input type="text" id="fatherName" oninput="validateTextOnly(this)">
+
+                    <label for="fatherOccupation">Father's Occupation:</label>
+                    <input type="text" id="fatherOccupation" oninput="validateTextOnly(this)">
+
+                    <label for="motherName">Mother's Name:</label>
+                    <input type="text" id="motherName" oninput="validateTextOnly(this)">
+
+                    <label for="motherOccupation">Mother's Occupation:</label>
+                    <input type="text" id="motherOccupation" oninput="validateTextOnly(this)">
+
+                    <label for="siblings">Number of Siblings:</label>
+                    <select id="siblings" onchange="validateSelect(this)">
+                        <option value="Select number of siblings">Select number of siblings</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5 or more">5 or more</option>
+                    </select>
+                </div>
+
+                <div class="form-section" id="education">
+                    <h2>Education</h2>
+                    <label for="highestQualification">Highest Qualification:</label>
+                    <input type="text" id="highestQualification" oninput="validateTextOnly(this)">
+
+                    <label for="university">University/College Name:</label>
+                    <input type="text" id="university" oninput="validateTextOnly(this)">
+
+                    <label for="additionalCertifications">Additional Certifications:</label>
+                    <textarea id="additionalCertifications" oninput="validateTextOnly(this)"></textarea>
+                </div>
+
+                <div class="form-section" id="profession">
+                    <h2>Profession</h2>
+                    <label for="occupation">Current Occupation:</label>
+                    <input type="text" id="occupation" oninput="validateTextOnly(this)">
+
+                    <label for="income">Annual Income:</label>
+                    <select id="income" onchange="validateSelect(this)">
+                        <option value="Select your annual income">Select your annual income</option>
+                        <option value="Currently Unemployed">Currently Unemployed</option>
+                        <option value="0 - 10,000 Tk">0 - 10,000 Tk</option>
+                        <option value="10,001 - 20,000 Tk">10,001 - 20,000 Tk</option>
+                        <option value="20,001 - 30,000 Tk">20,001 - 30,000 Tk</option>
+                        <option value="30,001 - 50,000 Tk">30,001 - 50,000 Tk</option>
+                        <option value="50,001 - 70,000 Tk">50,001 - 70,000 Tk</option>
+                        <option value="70,001 - 100,000 Tk">70,001 - 100,000 Tk</option>
+                        <option value="100,001 - 150,000 Tk">100,001 - 150,000 Tk</option>
+                        <option value="150,001 - 200,000 Tk">150,001 - 200,000 Tk</option>
+                        <option value="Above 200,000 Tk">Above 200,000 Tk</option>
+                    </select>
+
+                    <label for="futureCareerPlan">Future Career Plan:</label>
+                    <textarea id="futureCareerPlan" oninput="validateTextOnly(this)"></textarea>
+                </div>
+
+                <div class="form-section" id="lifestyle">
+                    <h2>Appearance & Lifestyle</h2>
+                    <label for="complexion">Complexion:</label>
+                    <select id="complexion" onchange="validateSelect(this)">
+                        <option value="Select your complexion">Select your complexion</option>
+                        <option value="Very Fair">Very Fair</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Wheatish">Wheatish</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Dusky">Dusky</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="bodyType">Body Type:</label>
+                    <select id="bodyType" onchange="validateSelect(this)">
+                        <option value="Select your body type">Select your body type</option>
+                        <option value="Slim">Slim</option>
+                        <option value="Athletic">Athletic</option>
+                        <option value="Average">Average</option>
+                        <option value="Fit">Fit</option>
+                        <option value="Chubby">Chubby</option>
+                        <option value="Heavy">Heavy</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="diet">Diet:</label>
+                    <select id="diet" onchange="validateSelect(this)">
+                        <option value="Select your diet preference">Select your diet preference</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                        <option value="Eggetarian (Vegetarian + Eggs)">Eggetarian (Vegetarian + Eggs)</option>
+                        <option value="Vegan (No animal products)">Vegan (No animal products)</option>
+                        <option value="Halal">Halal</option>
+                        <option value="Kosher">Kosher</option>
+                        <option value="Occasionally Non-Vegetarian">Occasionally Non-Vegetarian</option>
+                        <option value="Pescatarian (Fish but no other meat)">Pescatarian (Fish but no other meat)</option>
+                        <option value="Jain (Strict vegetarian, no root vegetables)">Jain (Strict vegetarian, no root vegetables)</option>
+                        <option value="No Specific Preference">No Specific Preference</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="smoking">Smoking:</label>
+                    <select id="smoking" onchange="validateSelect(this)">
+                        <option value="Select">Select</option>
+                        <option value="No">No</option>
+                        <option value="Occasionally">Occasionally</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+
+                    <label for="drinking">Drinking:</label>
+                    <select id="drinking" onchange="validateSelect(this)">
+                        <option value="Select">Select</option>
+                        <option value="No">No</option>
+                        <option value="Occasionally">Occasionally</option>
+                        <option value="Yes">Yes</option>
+                    </select>
+
+                    <label for="hobbies">Hobbies/Interests:</label>
+                    <textarea id="hobbies" oninput="validateTextOnly(this)"></textarea>
+                </div>
+
+                <div class="form-section" id="partnerPreferences">
+                    <h2>Partner Preferences</h2>
+                    <label for="partnerAge">Age Range:</label>
+                    <input type="text" id="partnerAge" oninput="validateAgeRange(this)">
+
+                    <label for="partnerHeight">Height:</label>
+                    <input type="text" id="partnerHeight" oninput="validateHeight(this)">
+
+                    <label for="partnerEducation">Education:</label>
+                    <input type="text" id="partnerEducation" oninput="validateTextOnly(this)">
+
+                    <label for="partnerOccupation">Occupation:</label>
+                    <input type="text" id="partnerOccupation" oninput="validateTextOnly(this)">
+
+                    <label for="partnerReligion">Religion:</label>
+                    <input type="text" id="partnerReligion" oninput="validateTextOnly(this)">
+                </div>
+
+                <div class="form-section" id="additionalDetails">
+                    <h2>Additional Details</h2>
+                    <label for="aboutMe">About Me:</label>
+                    <textarea id="aboutMe" oninput="validateTextOnly(this)"></textarea>
+
+                    <label for="futurePlans">Future Plans:</label>
+                    <textarea id="futurePlans" oninput="validateTextOnly(this)"></textarea>
+
+                    <label for="disability">Disabilities or Health Issues:</label>
+                    <select id="disability" onchange="validateSelect(this)">
+                        <option value="Select if applicable">Select if applicable</option>
+                        <option value="None">None</option>
+                        <option value="Visual Impairment">Visual Impairment</option>
+                        <option value="Hearing Impairment">Hearing Impairment</option>
+                        <option value="Physical Disability">Physical Disability</option>
+                        <option value="Speech Disorder">Speech Disorder</option>
+                        <option value="Mental Health Condition">Mental Health Condition</option>
+                        <option value="Chronic Illness (e.g., Diabetes, Asthma)">Chronic Illness (e.g., Diabetes, Asthma)</option>
+                        <option value="Neurological Condition">Neurological Condition</option>
+                        <option value="Other (please specify)">Other (please specify)</option>
+                    </select>
+
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" oninput="validateMixed(this)"></textarea>
+                </div>
+
+                <div class="submit-area">
+                    <button type="submit">Submit Biodata</button>
+                    <button type="reset" class="reset-btn">Reset</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

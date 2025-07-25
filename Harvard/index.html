@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Al Noman</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo-and-alert">
+                <div class="logo">
+                    <img src="https://placehold.co/30x30/a41034/ffffff?text=A" alt="Harvard University Logo" class="harvard-crest">
+                    <a href="#">MY<br>PORTFOLIO</a>
+                </div>
+                <p class="alert-message"> <span style="color: #ff0000; font-size: 25px;">•</span> Building the future, one pixel and algorithm at a time</p>
+            </div>
+            <nav class="main-nav">
+                <div class="nav-icons">
+                    <button class="search-btn" aria-label="Search">
+                        <svg class="icon-search" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                        Search
+                    </button>
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <svg class="icon-menu" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                        </svg>
+                        Menu
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="close-btn-container">
+            <div class="mobile-menu-logo">
+                <img src="https://placehold.co/30x30/a41034/ffffff?text=A" alt="Harvard University Logo" class="harvard-crest">
+                ABDULLAH AL NOMAN
+            </div>
+            <button class="close-btn" aria-label="Close Menu">Close &times;</button>
+        </div>
+        <ul class="main-menu-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">My Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="hero-section" style="background-image: url('assets/uni.png'); 
+                     background-size: cover; 
+                     background-position: center; 
+                     height: 100vh;">
+            <div class="hero-content">
+                <h1 style="font-size: 100px;">Abdullah Al Noman</h1>
+                <p>ML Specialist | Research Analyst<p>
+            </div>
+        </section>
+
+        <section class="content-blocks" id="about">
+            <h1>About</h1>
+            <div class="content grid-2-col">
+                <div class="block1">
+                    <div class="image">
+                        <img src="assets/noman.jpg" alt="Lab to Market">
+                    </div>
+                </div>
+                <div class="block2">
+                    <h1>Hi, I'am Abdullah Al Noman</h1>
+                    <p>A passionate ML Specialist dedicated to transforming raw data into actionable insights. With a strong foundation in machine learning, statistical analysis, and data visualization, I thrive on solving complex problems and driving impactful decisions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-strip">
+            <div class="skills">    
+                <h1>Skills</h1>
+            </div>
+            <hr class="section-line">
+            <div class="timeline-strip-container">
+                <div class="timeline-strip-item">
+                    <h2 class="timeline-strip-heading past">HTML5</h2>
+                    <img src="assets/html.jpg" alt="Past - Organ Transplant" style="width: 85%;">
+                    <div class="skill-bar">
+                        <div class="bar-label">HTML5</div>
+                        <div class="bar-container">
+                            <div class="bar-fill html-fill">95%</div>
+                        </div>
+                    </div>
+                    <p>I have built the foundation of my web development journey by mastering HTML. From structuring websites to creating accessible layouts, I have crafted countless responsive pages using clean and semantic markup.</p>
+                </div>
+                <div class="timeline-strip-item">
+                    <h2 class="timeline-strip-heading present">CSS3</h2>
+                    <img src="assets/css.png" alt="Present - Tuberculosis Research" style="width: 90%;">
+                    <div class="skill-bar">
+                        <div class="bar-label">CSS3</div>
+                        <div class="bar-container">
+                            <div class="bar-fill css-fill">70%</div>
+                        </div>
+                    </div>
+                    <p>Once I had a strong foundation with HTML, I moved on to CSS to bring design to life. I’ve designed fully responsive interfaces, implemented animations, and styled websites that not only look good but also adapt perfectly to every screen.</p>
+                </div>
+                <div class="timeline-strip-item">
+                    <h2 class="timeline-strip-heading future">JAVASCRIPT</h2>
+                    <img src="assets/js.jpg" alt="Future - Type 1 Diabetes Treatment" style="width: 100%;" style="padding: 10px;">
+                    <div class="skill-bar">
+                        <div class="bar-label">JavaScript</div>
+                        <div class="bar-container">
+                            <div class="bar-fill js-fill">60%</div>
+                        </div>
+                    </div>
+                    <p>With JavaScript, I unlocked the power of interactivity. I’ve built dynamic components, handled user events, and connected frontend designs with real-time logic. This skill has empowered me to turn static pages into functional web applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="portfolio">
+            <h1>My Projects</h1>
+            <div class="project grid-2-col">
+                <div class="project1">
+                    <div class="cal">
+                        <img src="assets/cal.jpg" alt="Lab to Market">
+                        <div class="button-container">
+                            <a href="Calculator/index.html" class="button-link">
+                                <div class="icon-circle">
+                                    <div class="icon-arrow"></div>
+                                </div>
+                                <a href="Calculator/index.html">
+                                <span class="button-text">Explore Calculator Project</span></a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project2">
+                    <div class="wed">
+                        <img src="assets/wedding.jpeg" alt="Lab to Market">
+                        <div class="button-container">
+                            <a href="biodata/index.html" class="button-link">
+                                <div class="icon-circle">
+                                    <div class="icon-arrow"></div>
+                                </div>
+                                <a href="biodata/index.html">
+                                <span class="button-text">Explore Wedding Biodata Project</span></a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h1>Contact</h1>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer grid-3-col">
+            <div class="container copyright-social">
+                <div>
+                    <p class="copyright">&copy; Copyright 2025 Abdullah Al Noman</p>
+                </div>
+                <div class="footer-logo">
+                    <p>ABDULLAH AL NOMAN</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/noman_rafs/" aria-label="Instagram"><img src="https://www.harvard.edu/wp-content/uploads/2023/11/Instagram-1.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/noman-rafi/" aria-label="LinkedIn"><img src="https://www.harvard.edu/wp-content/uploads/2023/11/Linkedin-1.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/nomanrafs" aria-label="Facebook"><img src="https://www.harvard.edu/wp-content/uploads/2023/11/FB3.png" alt="Facebook"></a>
+                    <a href="https://github.com/nomanrafi" aria-label="Github"><img src="assets/git.png" alt="Github"></a>
+
+                </div>
+                <div class="blank-section"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
