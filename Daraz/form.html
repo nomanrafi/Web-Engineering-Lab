@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as Global Seller</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-100 min-h-screen flex flex-col">
+
+    <!-- Header for Form Page -->
+<header class="py-4 bg-gradient-to-r from-[#f2f8ff] to-[#eef3ff]">
+  <div class="container mx-auto flex items-center justify-between px-4">
+    
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="https://img.alicdn.com/imgextra/i1/O1CN01LW5Jch1qvc6NZLLOa_!!6000000005558-55-tps-156-32.svg" alt="Seller Center Logo" class="h-10">
+    </a>
+
+    <!-- Language Selector and Go Login -->
+    <div class="flex items-center space-x-4">
+      
+      <!-- Language Dropdown -->
+      <div class="relative">
+        <select class="appearance-none bg-transparent text-black py-2 pl-6 pr-8 leading-tight focus:outline-none">
+          <option>🌐 Simplified Chinese</option>
+          <option>English</option>
+        </select>
+        
+        <!-- Globe icon (left inside select) -->
+        <div class="pointer-events-none absolute inset-y-0 left-1 flex items-center text-gray-700">
+          <span class="text-lg"></span>
+        </div>
+        
+        <!-- Down arrow (right inside select) -->
+        <div class="pointer-events-none absolute inset-y-0 right-2 flex items-center text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M5.516 7.548L10 12.032l4.484-4.484L15.9 8.964 10 14.864 4.1 8.964z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Go Login Button -->
+      <a href="seller.html">
+        <button style="
+          padding: 7px 20px;
+          font-size: 16px;
+          color: #007bff;
+          border: 1px solid #007bff;
+          border-radius: 5px;
+          background-color: transparent;
+          cursor: pointer;">
+          Go Login
+        </button>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+     
+
+    <!-- Main Content Area - Form -->
+    <main class="flex-grow flex items-center justify-center py-10 px-4 bg-gradient-to-br from-blue-100 to-white">
+    
+        <div class="container mx-auto max-w-2xl"><!-- Welcome Text -->
+<div class="text-center py-8 bg-white">
+  <h1 class="text-4xl font-semibold text-gray-800">
+    Welcome to the Cross-Border Seller Center
+  </h1>
+</div>
+            <div class="form-card relative">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Fill in the registration information</h2>
+
+                <!-- "Oriented Invitations Merchant" tag -->
+                
+
+                <form id="registrationForm">
+                    <!-- Country -->
+                    <div class="mb-5">
+                        <label for="country" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span style="color: rgb(255, 0, 0);">*</span> Country in which the company is incorporated
+                        </label>
+                        <p class="text-gray-500 text-xs mb-2">
+                            Country cannot be changed after account registration, please choose carefully
+                        </p>
+                        <div class="relative">
+                            <select id="country" name="country" class="form-input appearance-none">
+                                <option value="mainland_china">Mainland China</option>
+                                <option value="bangladesh">Bangladesh</option>
+                                <option value="india">India</option>
+                                <option value="pakistan">Pakistan</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mailbox (Email) -->
+                    <div class="mb-5">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span style="color: rgb(255, 0, 0);">*</span> Mailbox
+                        </label>
+                        <div class="flex">
+                            <input type="email" id="email" name="email" placeholder="Please enter your e-mail" class="form-input flex-grow mr-2" required>
+                            <button type="button" id="sendEmailCode" class="bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition duration-300 ease-in-out text-sm">Send</button>
+                        </div>
+                        <p id="emailError" class="error-message"></p>
+                    </div>
+
+                    <!-- Email Verification Code -->
+                    <div class="mb-5">
+                        <input type="text" id="emailVerificationCode" name="emailVerificationCode" placeholder="Please enter your email verification code" class="form-input">
+                    </div>
+
+                    <!-- Set Account Password -->
+                    <div class="mb-5">
+                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span style="color: rgb(255, 0, 0);">*</span> Set account password
+                        </label>
+                        <p class="text-gray-500 text-xs mb-2">
+                            The password needs to be 6-20 digits, letters, special symbols at least 2 different format character combinations
+                        </p>
+                        <div class="relative mb-3">
+                            <input type="password" id="password" name="password" placeholder="Please enter a password" class="form-input pr-10" required>
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer toggle-password" data-target="password">
+                                <i class="fas fa-eye-slash"></i>
+                            </span>
+                        </div>
+                        <p id="passwordError" class="error-message"></p>
+                        <div class="relative">
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Please enter your password again" class="form-input pr-10" required>
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer toggle-password" data-target="confirmPassword">
+                                <i class="fas fa-eye-slash"></i>
+                            </span>
+                        </div>
+                        <p id="confirmPasswordError" class="error-message"></p>
+                    </div>
+
+                    <!-- Bind Mobile Phone Number -->
+                    <div class="mb-5">
+                        <label for="mobileNumber" class="block text-gray-700 text-sm font-bold mb-2">
+                            <span style="color: rgb(255, 0, 0);">*</span> Bind mobile phone number
+                        </label>
+                        <div class="flex">
+                            <span class="inline-flex items-center px-3 text-gray-700 bg-gray-200 border border-r-0 border-gray-300 rounded-l-md text-sm">
+                                86
+                            </span>
+                            <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Please enter your mobile number" class="form-input flex-grow rounded-l-none" required>
+                        </div>
+                        <p id="mobileNumberError" class="error-message"></p>
+                    </div>
+
+                    <!-- SMS Verification Code -->
+                    <div class="mb-5">
+                        <div class="flex">
+                            <input type="text" id="smsVerificationCode" name="smsVerificationCode" placeholder="Please enter SMS verification code" class="form-input flex-grow mr-2">
+                            <button type="button" id="sendSmsCode" class="bg-gray-200 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-300 transition duration-300 ease-in-out text-sm">Send</button>
+                        </div>
+                    </div>
+
+                    <!-- Checkboxes -->
+                    <div class="mb-5">
+                        <div class="flex items-start mb-2">
+                            <input type="checkbox" id="terms" name="terms" class="mt-1 mr-2 rounded text-blue-600 focus:ring-blue-500" required>
+                            <label for="terms" class="text-gray-700 text-sm">
+                                I have read and agree <span style="color: blue;">"Agreement on Unified Workbench Services for Cross-Border Merchants"</span>
+                            </label>
+                        </div>
+                        <div class="flex items-start">
+                            <input type="checkbox" id="consent" name="consent" class="mt-1 mr-2 rounded text-blue-600 focus:ring-blue-500" required>
+                            <label for="consent" class="text-gray-700 text-sm">
+                                I have read and agree <span style="color: blue;">"Letter of Consent for Cross-border Transmission of Personal Information from Chinese Sellers"</span>
+                            </label>
+                        </div>
+                        <p id="checkboxError" class="error-message"></p>
+                    </div>
+
+                    <!-- Register Button -->
+                    <button type="submit" class="btn-primary w-full">Register</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
