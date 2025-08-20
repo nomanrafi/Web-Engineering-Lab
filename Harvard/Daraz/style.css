@@ -1,0 +1,178 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container for consistent spacing */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Specific styles for the main banner (green section) */
+.bg-green-500 {
+    background-color: #28a745; /* A shade of green */
+}
+
+/* Specific styles for the ad image section (purple section) */
+.bg-purple-500 {
+    background-color: #800080; /* A shade of purple */
+}
+
+/* Specific styles for the carousel section (red section) */
+.bg-red-500 {
+    background-color: #dc3545; /* A shade of red */
+}
+
+/* Form specific styles for seller.html and form.html */
+.form-card {
+    background-color: white;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    padding: 2.5rem; /* p-10 */
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem; /* py-3 px-4 */
+    border: 1px solid #d1d5db; /* border-gray-300 */
+    border-radius: 0.375rem; /* rounded-md */
+    outline: none;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-input:focus {
+    border-color: #f97316; /* focus:border-orange-500 */
+    box-shadow: 0 0 0 3px rgba(253, 186, 116, 0.5); /* focus:ring-orange-200 */
+}
+
+.btn-primary {
+    background-color: #354bf5; /* bg-orange-500 */
+    color: white;
+    font-weight: 700; /* font-bold */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #ea580c; /* hover:bg-orange-600 */
+}
+
+.error-message {
+    color: #ef4444; /* text-red-500 */
+    font-size: 0.875rem; /* text-sm */
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+/* Custom styles for the search input background */
+.search-input-bg {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly off-white for the input background */
+}
+
+/* Custom styles for top navigation links for the "bitter slide" effect */
+.top-nav-link {
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for effects */
+    display: inline-block; /* Required for transform to work correctly */
+}
+.top-nav-link:hover {
+    color: #fff; /* Pure white on hover for stronger contrast */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9); /* More pronounced glow/shadow */
+    transform: translateY(-3px); /* Further increased vertical "slide" up effect */
+}
+
+/* Carousel specific styles */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 170%; /* Each item takes full width */
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.carousel-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: #fff;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Adjust header for smaller screens */
+    header .flex-grow {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    header .flex-grow input {
+        width: calc(100% - 2.5rem); /* Adjust for search button */
+    }
+
+    header .flex-grow button {
+        width: 2.5rem;
+    }
+
+    header .flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header .flex-shrink-0,
+    header .flex-grow,
+    header .items-center {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    /* Adjust main content layout */
+    .lg:flex-row {
+        flex-direction: column;
+    }
+
+    .lg:w-3/4,
+    .lg:w-1/4 {
+        width: 100%;
+    }
+
+    /* Form adjustments */
+    .form-card {
+        padding: 1.5rem;
+    }
+}
